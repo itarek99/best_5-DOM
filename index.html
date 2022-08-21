@@ -6,10 +6,170 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
   <title>Document</title>
 </head>
 
-<body>
+<body class="bg-zinc-900">
+  <section class="container mx-auto px-2">
+    <div class="hero-section">
+      <div class="text-white text-center flex flex-col justify-center items-center h-full">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold -mt-24">Build Your Mighty Team!</h1>
+        <p class="max-w-3xl mt-8 text-base md:text-lg">Easily create your own football team in our soccer tactics and
+          formations
+          tool.
+          Use it to show what is your current favourite lineup or who you want to play on the next match.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto mt-12 px-2">
+    <div class="grid grid-cols-4 lg:grid-cols-5 xl:grid-cols-4 gap-12">
+      <div class="col-span-4 lg:col-span-3 xl:col-span-3">
+        <!-- Players Card Container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+          <!-- Player Card -->
+          <div class="bg-slate-900 text-center">
+            <img class="h-64 w-full object-cover object-top" src="./images/messi.webp" alt="messi">
+            <div class="py-5 px-4">
+              <h2 class="text-white font-bold text-2xl">Lionel Messi</h2>
+              <div class="flex justify-center items-center text-gray-300 mt-1 mb-4">
+                <p>750 Goals</p>
+                <div class="mx-4 h-1 w-2 bg-gray-300"></div>
+                <p>120 Assist</p>
+              </div>
+              <button
+                class="select-btn bg-blue-600 w-full py-2 font-semibold uppercase text-white duration-200 hover:bg-blue-700">Select</button>
+            </div>
+          </div>
+          <!-- Player Card -->
+          <div class="bg-slate-900 text-center">
+            <img class="h-64 w-full object-cover object-top" src="./images/ronaldo.png" alt="messi">
+            <div class="py-5 px-4">
+              <h2 class="text-white font-bold text-2xl">Cristiano Ronaldo</h2>
+              <div class="flex justify-center items-center text-gray-300 mt-1 mb-5">
+                <p>750 Goals</p>
+                <div class="mx-4 h-1 w-2 bg-gray-300"></div>
+                <p>120 Assist</p>
+              </div>
+              <button
+                class="select-btn bg-blue-600 w-full py-2 font-semibold uppercase text-white duration-200 hover:bg-blue-700">Select</button>
+            </div>
+          </div>
+          <!-- Player Card -->
+          <div class="bg-slate-900 text-center">
+            <img class="h-64 w-full object-cover object-top" src="./images/neymar.jpg" alt="messi">
+            <div class="py-5 px-4">
+              <h2 class="text-white font-bold text-2xl">Neymar</h2>
+              <div class="flex justify-center items-center text-gray-300 mt-1 mb-5">
+                <p>750 Goals</p>
+                <div class="mx-4 h-1 w-2 bg-gray-300"></div>
+                <p>120 Assist</p>
+              </div>
+              <button
+                class="select-btn bg-blue-600 w-full py-2 font-semibold uppercase text-white duration-200 hover:bg-blue-700">Select</button>
+            </div>
+          </div>
+          <!-- Player Card -->
+          <div class="bg-slate-900 text-center">
+            <img class="h-64 w-full object-cover object-top" src="./images/lewandowski.jpg" alt="messi">
+            <div class="py-5 px-4">
+              <h2 class="text-white font-bold text-2xl">Robert Lewandowski</h2>
+              <div class="flex justify-center items-center text-gray-300 mt-1 mb-5">
+                <p>600 Goals</p>
+                <div class="mx-4 h-1 w-2 bg-gray-300"></div>
+                <p>120 Assist</p>
+              </div>
+              <button
+                class="select-btn bg-blue-600 w-full py-2 font-semibold uppercase text-white duration-200 hover:bg-blue-700">Select</button>
+            </div>
+          </div>
+          <!-- Player Card -->
+          <div class="bg-slate-900 text-center">
+            <img class="h-64 w-full object-cover object-top" src="./images/mbappe.jpg" alt="messi">
+            <div class="py-5 px-4">
+              <h2 class="text-white font-bold text-2xl">Kylian Mbappé</h2>
+              <div class="flex justify-center items-center text-gray-300 mt-1 mb-5">
+                <p>750 Goals</p>
+                <div class="mx-4 h-1 w-2 bg-gray-300"></div>
+                <p>120 Assist</p>
+              </div>
+              <button
+                class="select-btn bg-blue-600 w-full py-2 font-semibold uppercase text-white duration-200 hover:bg-blue-700">Select</button>
+            </div>
+          </div>
+          <!-- Player Card -->
+          <div class="bg-slate-900 text-center">
+            <img class="h-64 w-full object-cover object-top" src="./images/bruyne.jpg" alt="messi">
+            <div class="py-5 px-4">
+              <h2 class="text-white font-bold text-2xl">Kevin De Bruyne</h2>
+              <div class="flex justify-center items-center text-gray-300 mt-1 mb-5">
+                <p>750 Goals</p>
+                <div class="mx-4 h-1 w-2 bg-gray-300"></div>
+                <p>120 Assist</p>
+              </div>
+              <button
+                class="select-btn bg-blue-600 w-full py-2 font-semibold uppercase text-white duration-200 hover:bg-blue-700">Select</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4 lg:col-span-2 xl:col-span-1">
+        <div class="flex flex-col space-y-8">
+          <!-- Player List -->
+          <div class="bg-slate-900 text-white pt-6 px-8 h-80">
+            <div class="text-center px-6">
+              <h2 class="font-semibold text-3xl border-b-2 pb-2">Selected &nbsp;<span id="player-count"
+                  class="text-orange-600">0</span></h2>
+            </div>
+            <ol id="player-list" class="list-decimal mt-6 text-lg pl-6">
+              <!-- Player will Appear Here -->
+            </ol>
+          </div>
+
+          <!-- Budget -->
+          <div class="bg-slate-900 text-white p-8">
+            <div class="text-center px-8">
+              <h2 class="font-semibold text-3xl border-b-2 pb-2 ">Budget</h2>
+            </div>
+
+            <div class="flex items-center mt-6">
+              <label for="player-price" class="w-2/5 text-gray-300">Per Player</label>
+              <input id="player-price" class="w-3/5 bg-transparent border outline-none p-2 placeholder:text-sm"
+                type="text" placeholder="Player Price">
+            </div>
+            <button id="btn-player-expense"
+              class="bg-blue-600 w-full py-2 font-semibold text-white duration-200 hover:bg-blue-700 mt-4">Calculate</button>
+            <div class="flex justify-between mt-2 text-lg font-semibold">
+              <p class="text-gray-300">Player Expense</p>
+              <p>$<span id="player-expense">0</span></p>
+            </div>
+            <div class="flex items-center mt-6">
+              <label for="manager-salary" class="w-2/5 text-gray-300">Manager</label>
+              <input id="manager-salary" class="w-3/5 bg-transparent border outline-none p-2 placeholder:text-sm"
+                type="text" placeholder="Manger Salary">
+            </div>
+            <div class="flex items-center mt-4">
+              <label for="coach-salary" class="w-2/5 text-gray-300">Coach</label>
+              <input id="coach-salary" class="w-3/5 bg-transparent border outline-none p-2 placeholder:text-sm"
+                type="text" placeholder="Coach Salary">
+            </div>
+            <button id="btn-total-expense"
+              class="bg-blue-600 w-full py-2 font-semibold  text-white duration-200 hover:bg-blue-700 mt-4">Calculate
+              Total</button>
+            <div class="flex justify-between mt-2 text-lg">
+              <p class="text-gray-300 font-semibold">Total Expense</p>
+              <p class="text-orange-600 font-semibold">$<span>0</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t mt-12 py-6">
+    <div class="text-center text-white">&copy; 2022; All Rights Reserved</div>
+  </footer>
 
 </body>
 

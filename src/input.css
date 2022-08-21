@@ -1,3 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
+@layer components {
+  .hero-section {
+    height: 70vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../images/hero_image.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+  .btn-disabled {
+    @apply bg-gray-300 text-gray-900 cursor-not-allowed;
+  }
+}
