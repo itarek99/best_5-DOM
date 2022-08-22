@@ -133,16 +133,25 @@
               <h2 class="font-semibold text-3xl border-b-2 pb-2 ">Budget</h2>
             </div>
 
-            <div class="flex items-center mt-6">
+            <div class="flex items-center justify-between mt-4 font-semibold">
+              <p class="text-gray-300">Current Selected</p>
+              <p id="selected-player-count" class="text-orange-600">0</p>
+            </div>
+
+            <div class="flex items-center mt-4">
               <label for="player-price" class="w-2/5 text-gray-300">Per Player</label>
               <input id="player-price" class="w-3/5 bg-transparent border outline-none p-2 placeholder:text-sm"
                 type="text" placeholder="Player Price">
             </div>
             <button id="btn-player-expense"
               class="bg-blue-600 w-full py-2 font-semibold text-white duration-200 hover:bg-blue-700 mt-4">Calculate</button>
-            <div class="flex justify-between mt-2 text-lg font-semibold">
+            <div class="flex items-center justify-between mt-4 font-semibold">
+              <p class="text-gray-300">Active Player</p>
+              <p id="active-player-count" class="text-orange-600">0</p>
+            </div>
+            <div class="flex justify-between mt-2 font-semibold">
               <p class="text-gray-300">Player Expense</p>
-              <p>$<span id="player-expense">0</span></p>
+              <p>$<span id="player-expense">0.0</span></p>
             </div>
             <div class="flex items-center mt-6">
               <label for="manager-salary" class="w-2/5 text-gray-300">Manager</label>
@@ -159,7 +168,7 @@
               Total</button>
             <div class="flex justify-between mt-2 text-lg">
               <p class="text-gray-300 font-semibold">Total Expense</p>
-              <p class="text-orange-600 font-semibold">$<span id="total-expense">0</span></p>
+              <p class="text-orange-600 font-semibold">$<span id="total-expense">0.0</span></p>
             </div>
           </div>
         </div>
