@@ -5,6 +5,7 @@ const playerPriceElement = document.getElementById('player-price');
 const playerExpenseBtn = document.getElementById('btn-player-expense');
 const totalExpenseBtn = document.getElementById('btn-total-expense');
 const playerExpense = document.getElementById('player-expense');
+const totalExpense = document.getElementById('total-expense');
 const managerSalary = document.getElementById('manager-salary');
 const coachSalary = document.getElementById('coach-salary');
 
@@ -40,6 +41,11 @@ const positiveIntegerValidation = (value) => {
   return false;
 };
 
+const calculatePlayerExpense = () => {
+  playerExpense.innerText = playerPriceElement.value * playerCount;
+  playerPriceElement.value = '';
+};
+
 playerExpenseBtn.addEventListener('click', () => {
   if (positiveIntegerValidation(playerPriceElement.value)) {
     playerPriceElement.value = '';
@@ -48,7 +54,16 @@ playerExpenseBtn.addEventListener('click', () => {
   if (playerCount < 1) {
     return alert('Please Select Player :(');
   }
+  calculatePlayerExpense();
+});
 
-  playerExpense.innerText = playerPriceElement.value * playerCount;
-  playerPriceElement.value = '';
+totalExpenseBtn.addEventListener('click', () => {
+  if (positiveIntegerValidation(managerSalary.value) || positiveIntegerValidation(coachSalary.value)) {
+    return alert('Please Input valid Number');
+  }
+
+  calculatePlayerExpense();
+
+  totalExpense.innerText =
+    parseInt(playerExpense.innerText) + parseInt(managerSalary.value) + parseInt(coachSalary.value);
 });
