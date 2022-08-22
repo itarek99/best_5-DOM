@@ -8,9 +8,9 @@ const coachSalary = document.getElementById('coach-salary');
 const activePlayerCount = document.getElementById('active-player-count');
 
 // function for select element by Id
-const elementById = (id) => {
+function elementById(id) {
   return document.getElementById(id);
-};
+}
 
 // initialize player count for later use
 let playerCount = 0;
@@ -41,28 +41,28 @@ selectBtns.forEach((selectBtn) => {
 });
 
 // check input value positive number or not
-const inputValueValidation = (element) => {
+function inputValueValidation(element) {
   if (parseInt(element.value) <= 0 || isNaN(parseInt(element.value))) {
     return true;
   }
   return false;
-};
+}
 
 // calculate selected player price
-const calculatePlayerExpense = () => {
+function calculatePlayerExpense() {
   playerExpense.innerText = (playerPriceElement.value * playerCount).toFixed(1);
-};
+}
 
-const calculateTotalExpense = () => {
+function calculateTotalExpense() {
   elementById('total-expense').innerText = (
     parseFloat(playerExpense.innerText) +
-    parseFloat(managerSalary.value) +
-    parseFloat(coachSalary.value)
+    parseFloat(managerSalary.value ? managerSalary.value : 0) +
+    parseFloat(coachSalary.value ? coachSalary.value : 0)
   ).toFixed(1);
-};
+}
 
 // event handler for calculate selected player
-elementById('btn-player-expense').addEventListener('click', () => {
+elementById('btn-player-expense').addEventListener('click', function () {
   if (playerCount < 1) {
     return alert('Please Select Player :(');
   }
@@ -70,9 +70,7 @@ elementById('btn-player-expense').addEventListener('click', () => {
   if (inputValueValidation(playerPriceElement)) {
     activePlayerCount.innerText = '0';
     playerExpense.innerText = '0.0';
-
     calculateTotalExpense();
-
     return alert('Please Input Valid Player Price');
   }
   activePlayerCount.innerText = playerList.children.length;
@@ -80,7 +78,7 @@ elementById('btn-player-expense').addEventListener('click', () => {
 });
 
 // event handler for calculate total expense
-elementById('btn-total-expense').addEventListener('click', () => {
+elementById('btn-total-expense').addEventListener('click', function () {
   calculatePlayerExpense();
 
   if (inputValueValidation(managerSalary)) {
