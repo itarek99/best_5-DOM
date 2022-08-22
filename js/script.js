@@ -53,6 +53,14 @@ const calculatePlayerExpense = () => {
   playerExpense.innerText = (playerPriceElement.value * playerCount).toFixed(1);
 };
 
+const calculateTotalExpense = () => {
+  elementById('total-expense').innerText = (
+    parseFloat(playerExpense.innerText) +
+    parseFloat(managerSalary.value) +
+    parseFloat(coachSalary.value)
+  ).toFixed(1);
+};
+
 // event handler for calculate selected player
 elementById('btn-player-expense').addEventListener('click', () => {
   if (playerCount < 1) {
@@ -63,11 +71,7 @@ elementById('btn-player-expense').addEventListener('click', () => {
     activePlayerCount.innerText = '0';
     playerExpense.innerText = '0.0';
 
-    elementById('total-expense').innerText = (
-      parseFloat(playerExpense.innerText) +
-      parseFloat(managerSalary.value) +
-      parseFloat(coachSalary.value)
-    ).toFixed(1);
+    calculateTotalExpense();
 
     return alert('Please Input Valid Player Price');
   }
@@ -90,9 +94,5 @@ elementById('btn-total-expense').addEventListener('click', () => {
   }
 
   activePlayerCount.innerText = playerList.children.length;
-  elementById('total-expense').innerText = (
-    parseFloat(playerExpense.innerText) +
-    parseFloat(managerSalary.value) +
-    parseFloat(coachSalary.value)
-  ).toFixed(1);
+  calculateTotalExpense();
 });
